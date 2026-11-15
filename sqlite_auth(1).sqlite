@@ -1,0 +1,30 @@
+
+CREATE TABLE login_user (
+id_a INTEGER PRIMARY KEY,
+username VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE auth ( 
+id INTEGER PRIMARY KEY,
+authen VARCHAR(256) NOT NULL
+);
+
+INSERT INTO login_user (id_a, username)
+VALUES
+(0,'admin'),
+(1,'other'),
+(2,'bob');
+
+INSERT INTO auth (id, authen)
+VALUES
+(0,0),
+(1,1),
+(2,2);
+
+UPDATE auth 
+SET authen = hex(randomblob(32));
+
+SELECT * FROM login_user;
+
+SELECT * FROM auth; 
+
