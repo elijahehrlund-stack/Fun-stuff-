@@ -1,0 +1,18 @@
+
+
+
+CREATE TABLE goals_2026_2027 (
+    goal_id SERIAL PRIMARY KEY,
+    goal_name VARCHAR(150) NOT NULL,
+    goal_date DATE,
+    why_it_matters VARCHAR(250) NOT NULL,
+    difficulty_1_thru_10 INT NOT NULL
+);
+
+INSERT INTO goals_2026_2027 (goal_id, goal_name, goal_date, why_it_matters, difficulty_1_thru_10)
+    VALUES 
+    (1,'Complete Security plus cert','1-1-27','Learning and employment',7),
+    (2,'Find a part time IT/cyber job','ASAP',' work experiance',10),
+    (3,'Bench 225','6-30-27','because its awesome',6);
+
+SELECT * FROM goals_2026_2027;
